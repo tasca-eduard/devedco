@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import { NextPage } from 'next';
 import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
