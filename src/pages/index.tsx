@@ -1,14 +1,10 @@
-import { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        
-      </Head>
       <Header />
       <main className="main">
         <div className="hero">
