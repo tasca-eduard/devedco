@@ -30,7 +30,7 @@ export default function Header() {
                 className="nav-link" 
                 onClick={() => print()}
               >
-                Get CV
+                Resume
               </button>
             </li>
           </ul>
@@ -80,7 +80,7 @@ export default function Header() {
                 className="nav-link" 
                 onClick={() => print()}
               >
-                Get CV
+                Resume
               </button>
             </li>
           </ul>

@@ -1,8 +1,32 @@
 import type { NextPage } from 'next';
+import { ChangeEvent, ChangeEventHandler, FormEvent, useState } from 'react';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 
 const Home: NextPage = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const submitMail = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const res = await fetch('/api/email', {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        email,
+        message
+      })
+    });
+    
+    const resObj = await res.json();
+
+    setIsLoading(false);
+    setMessage(resObj.message);
+  }
+
   return (
     <>
       <Header />
@@ -27,29 +51,66 @@ const Home: NextPage = () => {
               <small>Mind the timezone differences.</small>
             </div>
             <div className="widget-container">
-              <form className="form">
+              <form 
+                onSubmit={submitMail} 
+                className="form" 
+                noValidate
+              >
                 <h2 id="contact">Let's chat</h2>
                 <br />
                 <div className="field">
                   <label htmlFor="username" className="label">Name / Alias</label>
-                  <input className="input" type="text" name="username" id="username" placeholder="Enter your name or alias" />
+                  <input
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)} 
+                    className="input" 
+                    type="text" 
+                    name="username" 
+                    id="username" 
+                    placeholder="Enter your name or alias" 
+                  />
                 </div>
                 <div className="field">
                   <label htmlFor="email" className="label">Email</label>
-                  <input className="input" type="email" name="email" id="email" placeholder="Enter your email" />
+                  <input
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} 
+                    className="input" 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Enter your email" 
+                  />
                 </div>
                 <div className="field">
                   <label htmlFor="message" className="label">Message</label>
-                  <textarea className="input" name="message" id="message" cols={30} rows={2} placeholder="Enter your message"></textarea>
+                  <textarea 
+                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
+                    className="input" 
+                    name="message" 
+                    id="message" 
+                    cols={30} 
+                    rows={2} 
+                    placeholder="Enter your message"
+                  >
+                  </textarea>
                 </div>
                 <small>Data will be used only to communicate.</small>
                 <br />
                 <br />
-                <button className="btn submit" type="submit">
-                  Send
-                </button>
+                {
+                  isLoading ? (
+                    <button className="btn submit loader" disabled>
+                      <span className="dot"></span>
+                      <span className="dot"></span>
+                      <span className="dot"></span>
+                    </button>
+                  ) : (
+                    <button className="btn submit">
+                      Send
+                    </button>
+                  )
+                }
                 <br />
-                <span>Use your prefered <a href="mailto:eduardcristiantasca@gmail.com">email service</a>.</span>
+                <span>Use your prefered <a href="mailto:contact@devedco.com">email service</a>.</span>
               </form>
             </div>
           </div>
