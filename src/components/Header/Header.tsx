@@ -42,7 +42,10 @@ export default function Header() {
                 setHash={setHash}
                 className="nav-link"
               >
-                Projects
+                <span>
+                  <i className="fa-solid fa-list"></i>
+                  Projects
+                </span>
               </ActiveLink>
             </li>
             <li className="nav-item">
@@ -52,7 +55,10 @@ export default function Header() {
                 setHash={setHash}
                 className="nav-link"
               >
-                Techs
+                <span>
+                  <i className="fa-solid fa-screwdriver-wrench"></i>
+                  Techs
+                </span>
               </ActiveLink>
             </li>
             <li className="nav-item">
@@ -62,7 +68,10 @@ export default function Header() {
                 setHash={setHash}
                 className="nav-link"
               >
-                About
+                <span>
+                  <i className="fa-solid fa-user"></i>
+                  About
+                </span>
               </ActiveLink>
             </li>
             <li className="nav-item">
@@ -72,7 +81,10 @@ export default function Header() {
                 setHash={setHash}
                 className="nav-link"
               >
-                Contact
+                <span>
+                  <i className="fa-solid fa-at"></i>
+                  Contact
+                </span>
               </ActiveLink>
             </li>
             <li className="nav-item hide-mobile">
@@ -80,7 +92,10 @@ export default function Header() {
                 className="nav-link" 
                 onClick={() => print()}
               >
-                Resume
+                <span>
+                  <i className="fa-solid fa-file-lines"></i>
+                  Resume
+                </span>
               </button>
             </li>
           </ul>
