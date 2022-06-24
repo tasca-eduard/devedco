@@ -5,6 +5,10 @@
     display: flex;
     position: relative;
 
+    &::after {
+        bottom: 0;
+    }
+
     .immersed {
         position: absolute;
         top: -4px;

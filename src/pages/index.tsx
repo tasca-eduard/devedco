@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
-import { ChangeEvent, ChangeEventHandler, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
+import Logo from '../components/Logo/Logo';
 
 const Home: NextPage = () => {
   const [name, setName] = useState('');
@@ -35,11 +36,7 @@ const Home: NextPage = () => {
           <div className="hero-container container curved">
             <div className="content">
               <h1 id="home" className="intro">Welcome to
-                <span className="logo">
-                  <span className="immersed">dev</span>
-                  <span>ed</span>
-                  <span className="dim-text">co</span>
-                </span>
+                <Logo />
               </h1>
               <br />
               <p>Hi, fellow internet people. My name is Ed and I'm a mid Frontend Developer from Cluj-Napoca, Romania.</p>

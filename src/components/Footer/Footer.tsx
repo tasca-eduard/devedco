@@ -2,8 +2,6 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container container neutral">
-        <hr />
-        <br />
         <span>© devedco 2022</span>
         <br />
         <span>Social:&nbsp;</span>
