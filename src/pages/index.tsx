@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { ChangeEvent, ChangeEventHandler, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import Logo from '../components/Logo/Logo';
