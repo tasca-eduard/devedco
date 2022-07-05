@@ -1,10 +1,11 @@
 import type { NextPage } from 'next';
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useCallback, useEffect, useRef, useState } from 'react';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import Logo from '../components/Logo/Logo';
 
 const Home: NextPage = () => {
+  //state
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -38,7 +39,6 @@ const Home: NextPage = () => {
               <h1 id="home" className="intro">Welcome to
                 <Logo />
               </h1>
-              <br />
               <p>Hi, fellow internet people. My name is Ed and I'm a mid Frontend Developer from Cluj-Napoca, Romania.</p>
               <br />
               <p>If you are interested in creating a personal website, web app or an e-commerce platform and you need a Frontend/UI Developer, then I am your guy. I have +2 years of experience in applying or maintaining client needs using various technologies. Here's <a href="#">my personal work</a> and <a href="#">Github</a>.</p>
@@ -54,7 +54,6 @@ const Home: NextPage = () => {
                 noValidate
               >
                 <h2 id="contact">Let's chat</h2>
-                <br />
                 <div className="field">
                   <label htmlFor="username" className="label">Name / Alias</label>
                   <input
@@ -114,13 +113,12 @@ const Home: NextPage = () => {
         </div>
         <div className="container">
           <h2 id="portofolio">Projects</h2>
-          <br />
           <p>Comming soon</p>
           <small>Maybe horizontal cards with two columns as components</small>
         </div>
         <div className="container">
           <h2 id="techs">Techs & tools</h2>
-          <div className="list-3">
+          <div className="grid">
             <div className="card">
               <div className="content">
                 <h3>Frontend</h3>
@@ -162,7 +160,6 @@ const Home: NextPage = () => {
         <div className="container">
           <div>
             <h2 id="about">How I work</h2>
-            <br />
             <p>
               I put strong emphasis on having a clear understanding in the client's needs before even starting. Of course, there might be some features that will be done or patched along the way, since you can always change your mind and want other behaviours.
             </p>

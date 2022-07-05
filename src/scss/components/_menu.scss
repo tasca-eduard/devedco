@@ -1,0 +1,51 @@
+.menu {
+  &.desktop {
+    display: flex;
+    list-style-type: none;
+    margin-left: 0;
+  }
+
+  &.mobile {
+    background: $ternaryBg;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    z-index: 2;
+    margin-left: 0;
+
+    .nav-item {
+      flex-grow: 1;
+      margin: 0;
+    }
+
+    .nav-link {
+      padding: 10px;
+    }
+  }
+
+  .nav-item {
+    margin-left: 20px;
+    display: flex;
+  }
+
+  @media screen and (max-width: 767px) {
+    &.desktop {
+      display: none;
+    }
+
+    &.mobile {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &.mobile {
+      .nav-link {
+        padding: 20px 10px;
+      }
+    }
+  }
+}

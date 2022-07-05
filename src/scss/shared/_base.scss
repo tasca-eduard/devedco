@@ -1,3 +1,26 @@
+.ui {
+    @media screen and (max-width: 767px) {
+        .header,
+        .menu {
+            transition: .8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+    
+        &.hide-ui {
+            .header {
+                transform: translateY(-100%);
+            }
+    
+            .menu {
+                transform: translateY(100%);
+            }
+        }
+    }
+}
+
+.main {
+    margin-top: 120px;
+}
+
 .logo {
     font-size: 24px;
     font-weight: 700;
