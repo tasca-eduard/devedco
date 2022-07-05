@@ -11,7 +11,7 @@ import {
 
 export default function Header() {
   //const
-  const HIDE_SCROLL_BUFFER = 100;
+  const HIDE_SCROLL_BUFFER = 50;
 
   //state
   const [hash, setHash] = useState('');
