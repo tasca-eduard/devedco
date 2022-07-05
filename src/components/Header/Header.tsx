@@ -61,19 +61,6 @@ export default function Header() {
             >
               <Logo />
             </ActiveLink>
-            <ul className="nav-list hide-desktop">
-              <li className="nav-item">
-                <button
-                  className="nav-link"
-                  onClick={() => print()}
-                >
-                  <span>
-                    <FontAwesomeIcon icon={faFileLines} />
-                    Resume
-                  </span>
-                </button>
-              </li>
-            </ul>
             <ul className="menu desktop">
               <li className="nav-item">
                 <ActiveLink
@@ -133,7 +120,7 @@ export default function Header() {
                   onClick={() => print()}
                 >
                   <span>
-                    <i className="fa-solid fa-file-lines"></i>
+                    <FontAwesomeIcon icon={faFileLines} />
                     Resume
                   </span>
                 </button>
