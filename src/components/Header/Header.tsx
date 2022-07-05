@@ -1,6 +1,13 @@
-import { RefObject, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ActiveLink from "../Link/ActiveLink";
 import Logo from "../Logo/Logo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+  faList,
+  faFileLines,
+  faScrewdriverWrench,
+  faUser,
+  faAt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   //const
@@ -30,7 +37,7 @@ export default function Header() {
     }
 
     setY(window.scrollY);
-  }, [y]);
+  }, [y, hash]);
 
   useEffect(() => {
     setY(window.scrollY);
@@ -61,7 +68,7 @@ export default function Header() {
                   onClick={() => print()}
                 >
                   <span>
-                    <i className="fa-solid fa-file-lines"></i>
+                    <FontAwesomeIcon icon={faFileLines} />
                     Resume
                   </span>
                 </button>
@@ -76,7 +83,7 @@ export default function Header() {
                   className="nav-link"
                 >
                   <span>
-                    <i className="fa-solid fa-list"></i>
+                    <FontAwesomeIcon icon={faList} />
                     Projects
                   </span>
                 </ActiveLink>
@@ -89,7 +96,7 @@ export default function Header() {
                   className="nav-link"
                 >
                   <span>
-                    <i className="fa-solid fa-screwdriver-wrench"></i>
+                    <FontAwesomeIcon icon={faScrewdriverWrench} />
                     Techs
                   </span>
                 </ActiveLink>
@@ -102,7 +109,7 @@ export default function Header() {
                   className="nav-link"
                 >
                   <span>
-                    <i className="fa-solid fa-user"></i>
+                    <FontAwesomeIcon icon={faUser} />
                     About
                   </span>
                 </ActiveLink>
@@ -115,7 +122,7 @@ export default function Header() {
                   className="nav-link"
                 >
                   <span>
-                    <i className="fa-solid fa-at"></i>
+                    <FontAwesomeIcon icon={faAt} />
                     Contact
                   </span>
                 </ActiveLink>
@@ -144,7 +151,7 @@ export default function Header() {
             className="nav-link"
           >
             <span>
-              <i className="fa-solid fa-list"></i>
+              <FontAwesomeIcon icon={faList} />
               Projects
             </span>
           </ActiveLink>
@@ -157,7 +164,7 @@ export default function Header() {
             className="nav-link"
           >
             <span>
-              <i className="fa-solid fa-screwdriver-wrench"></i>
+              <FontAwesomeIcon icon={faScrewdriverWrench} />
               Techs
             </span>
           </ActiveLink>
@@ -170,7 +177,7 @@ export default function Header() {
             className="nav-link"
           >
             <span>
-              <i className="fa-solid fa-user"></i>
+              <FontAwesomeIcon icon={faUser} />
               About
             </span>
           </ActiveLink>
@@ -183,7 +190,7 @@ export default function Header() {
             className="nav-link"
           >
             <span>
-              <i className="fa-solid fa-at"></i>
+              <FontAwesomeIcon icon={faAt} />
               Contact
             </span>
           </ActiveLink>
@@ -194,7 +201,7 @@ export default function Header() {
             onClick={() => print()}
           >
             <span>
-              <i className="fa-solid fa-file-lines"></i>
+              <FontAwesomeIcon icon={faFileLines} />
               Resume
             </span>
           </button>
