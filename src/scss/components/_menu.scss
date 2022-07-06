@@ -38,13 +38,10 @@
 
     &.mobile {
       display: flex;
-    }
-  }
 
-  @media screen and (max-width: 576px) {
-    &.mobile {
       .nav-link {
-        padding: 20px 10px;
+        padding: 20px 6px;
+        font-size: 10px;
       }
     }
   }

@@ -63,7 +63,9 @@ a {
     background: transparent;
     padding: 10px 16px;
     border-radius: 5px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 12px;
     flex-grow: 1;
     border: none;
