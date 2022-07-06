@@ -50,6 +50,12 @@
     @media screen and (max-width: 767px) {
         .hero-container {
             flex-direction: column;
+
+            &::before {
+                left: 0;
+                width: 50%;
+                height: 170px;
+            }
         }
 
         .content {
@@ -61,7 +67,7 @@
         .widget-container {
             max-width: 100%;
             min-width: 0;
-            margin-bottom: 200px;
+            margin-bottom: 140px;
         }
     }
 }
