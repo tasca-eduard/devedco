@@ -14,7 +14,7 @@
             left: -40px;
             background: $primaryBg;
             border-top-right-radius: 100%;
-            box-shadow: 4px -4px 1px 1px $accent, 20px -20px 1px 1px $primaryBg;
+            // box-shadow: 4px -4px 1px 1px $accent, 20px -20px 1px 1px $primaryBg;
         }
     }
 
@@ -39,6 +39,7 @@
         max-width: 350px;
         min-width: 350px;
         width: 100%;
+        z-index: 1;
     }
 
     @media screen and (max-width: 991px) {
@@ -67,7 +68,7 @@
         .widget-container {
             max-width: 100%;
             min-width: 0;
-            margin-bottom: 140px;
+            margin-bottom: 0;
         }
     }
 }

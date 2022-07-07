@@ -7,9 +7,16 @@
     &:not(.neutral) {
         max-width: 1320px;
         background: $secondaryBg;
+        background-image: linear-gradient(165deg, $primaryBg 2%, $secondaryBg 10%, $secondaryBg 15%, $secondaryBg 20%, $secondaryBg 25%, $primaryBg 50%, $secondaryBg 100%);
+        // background-image: linear-gradient(135deg, red, blue);
         border-radius: 16px;
         margin-bottom: 80px;
         padding: 30px 40px;
+        background-attachment: fixed;
+
+        &:not(.hero-container) {
+            background-attachment: fixed;
+        }
     }
 
     @media screen and (max-width: 767px) {
@@ -17,6 +24,7 @@
 
         &:not(.neutral) {
             padding-inline: 20px;
+            margin-bottom: 40px;
         }
     }
 }

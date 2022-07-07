@@ -1,9 +1,8 @@
 .card {
-    background: $primaryBg;
+    background-image: linear-gradient(45deg, lighten($secondaryBg, 5%), $primaryBg, lighten($secondaryBg, 5%));
+    background-attachment: fixed;
     padding: 40px;
-    border-radius: 5px;
-    border: 2px solid $secondaryBg;
-    border-top: 2px solid $accent;
+    border-radius: 15px;
     display: flex;
 
     .content {
@@ -12,5 +11,9 @@
 
     @media screen and (max-width: 767px) {
         padding: 40px 20px;
+
+        .content {
+            margin-bottom: 0;
+        }
     }
 }
