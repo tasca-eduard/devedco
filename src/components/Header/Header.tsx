@@ -9,7 +9,10 @@ import {
   faUser,
   faAt, 
   faSwatchbook,
-  faGear} from "@fortawesome/free-solid-svg-icons";
+  faGear,
+  faDroplet,
+  faMoon,
+  faEraser} from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   //const
@@ -147,13 +150,22 @@ export default function Header() {
                   </button>
                   <ul className="options">
                     <li className="option">
-                      <button className="btn">Default</button>
+                      <button className="btn">
+                        <FontAwesomeIcon icon={faEraser} />
+                        Default
+                      </button>
                     </li>
                     <li className="option">
-                      <button className="btn">Twilight</button>
+                      <button className="btn">
+                        <FontAwesomeIcon icon={faMoon} />
+                        Twilight
+                      </button>
                     </li>
-                    <li className="option">
-                      <button className="btn">Dracula</button>
+                    <li className="option active">
+                      <button className="btn">
+                        <FontAwesomeIcon icon={faDroplet} />
+                        Dracula
+                      </button>
                     </li>
                   </ul>
                 </div>
