@@ -7,7 +7,9 @@ import {
   faFileLines,
   faScrewdriverWrench,
   faUser,
-  faAt } from "@fortawesome/free-solid-svg-icons";
+  faAt, 
+  faSwatchbook,
+  faGear} from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   //const
@@ -135,6 +137,26 @@ export default function Header() {
                     Resume
                   </span>
                 </button>
+              </li>
+              <li className="nav-item">
+                <div className="select">
+                  <button className="nav-link round">
+                    <span>
+                      <FontAwesomeIcon icon={faSwatchbook} />
+                    </span>
+                  </button>
+                  <ul className="options">
+                    <li className="option">
+                      <button className="btn">Default</button>
+                    </li>
+                    <li className="option">
+                      <button className="btn">Twilight</button>
+                    </li>
+                    <li className="option">
+                      <button className="btn">Dracula</button>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </nav>
