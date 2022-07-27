@@ -15,7 +15,7 @@
     
     &:hover,
     &:focus {
-        background: darken($inputBg, 1%);
+        background: darken($inputBg, 3%);
         border-bottom: 2px solid $accent;
         outline: none;
     }

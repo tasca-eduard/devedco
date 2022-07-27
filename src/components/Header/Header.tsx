@@ -140,7 +140,7 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <div className="select">
-                  <button className="nav-link round">
+                  <button className="trigger nav-link round">
                     <span>
                       <FontAwesomeIcon icon={faSwatchbook} />
                     </span>
