@@ -13,6 +13,7 @@ import {
   faDroplet,
   faMoon,
   faEraser} from "@fortawesome/free-solid-svg-icons";
+import Settings from "../Settings/Settings";
 
 export default function Header() {
   //const
@@ -142,33 +143,7 @@ export default function Header() {
                 </button>
               </li>
               <li className="nav-item">
-                <div className="select">
-                  <button className="trigger nav-link round">
-                    <span>
-                      <FontAwesomeIcon icon={faSwatchbook} />
-                    </span>
-                  </button>
-                  <ul className="options">
-                    <li className="option">
-                      <button className="btn">
-                        <FontAwesomeIcon icon={faEraser} />
-                        Default
-                      </button>
-                    </li>
-                    <li className="option">
-                      <button className="btn">
-                        <FontAwesomeIcon icon={faMoon} />
-                        Twilight
-                      </button>
-                    </li>
-                    <li className="option active">
-                      <button className="btn">
-                        <FontAwesomeIcon icon={faDroplet} />
-                        Dracula
-                      </button>
-                    </li>
-                  </ul>
-                </div>
+                <Settings />
               </li>
             </ul>
           </nav>
@@ -226,6 +201,9 @@ export default function Header() {
               Contact
             </span>
           </ActiveLink>
+        </li>
+        <li className="nav-item center">
+          <Settings />
         </li>
       </ul>
     </div>
