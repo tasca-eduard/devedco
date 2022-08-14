@@ -1,9 +1,10 @@
 import { faDroplet, faEraser, faMask, faMoon, faPeace, faSun, faSwatchbook, faWater, faWind } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ButtonSetting from "./ButtonSetting";
 
 export default function Settings() {
   return (
-    <div className="select">
+    <div className="settings">
       <button className="trigger nav-link round">
         <span>
           <FontAwesomeIcon icon={faSwatchbook} />
@@ -14,22 +15,19 @@ export default function Settings() {
           <span className="name">Dark</span>
           <ul className="list">
             <li className="option">
-              <button className="btn">
-                <FontAwesomeIcon icon={faEraser} />
+              <ButtonSetting faIcon={faEraser} value="default-dark">
                 Default
-              </button>
+              </ButtonSetting>
             </li>
             <li className="option">
-              <button className="btn">
-                <FontAwesomeIcon icon={faMoon} />
+              <ButtonSetting faIcon={faMoon} value="twilight">
                 Twilight
-              </button>
+              </ButtonSetting>
             </li>
-            <li className="option active">
-              <button className="btn">
-                <FontAwesomeIcon icon={faDroplet} />
+            <li className="option">
+              <ButtonSetting faIcon={faDroplet} value="dracula">
                 Dracula
-              </button>
+              </ButtonSetting>
             </li>
           </ul>
         </li>
@@ -37,22 +35,19 @@ export default function Settings() {
           <span className="name">Light</span>
           <ul className="list">
             <li className="option">
-              <button className="btn">
-                <FontAwesomeIcon icon={faEraser} />
+              <ButtonSetting faIcon={faEraser} value="default-light">
                 Default
-              </button>
+              </ButtonSetting>
             </li>
             <li className="option">
-              <button className="btn">
-                <FontAwesomeIcon icon={faSun} />
+              <ButtonSetting faIcon={faSun} value="sol">
                 Sol
-              </button>
+              </ButtonSetting>
             </li>
             <li className="option">
-              <button className="btn">
-                <FontAwesomeIcon icon={faWater} />
+              <ButtonSetting faIcon={faWater} value="waterfall">
                 Waterfall
-              </button>
+              </ButtonSetting>
             </li>
           </ul>
         </li>
@@ -60,16 +55,14 @@ export default function Settings() {
           <span className="name">Experimental</span>
           <ul className="list">
             <li className="option">
-              <button className="btn">
-                <FontAwesomeIcon icon={faMask} />
+              <ButtonSetting faIcon={faMask} value="stealth">
                 Stealth
-              </button>
+              </ButtonSetting>
             </li>
             <li className="option">
-              <button className="btn">
-                <FontAwesomeIcon icon={faWind} />
+              <ButtonSetting faIcon={faWind} value="windy">
                 Windy
-              </button>
+              </ButtonSetting>
             </li>
           </ul>
         </li>

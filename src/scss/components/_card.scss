@@ -1,9 +1,9 @@
 .card {
-    background: $primaryBg;
+    background: var(--primaryBg);
     padding: 40px;
     border-radius: 5px;
-    border: 2px solid $secondaryBg;
-    border-top: 2px solid $accent;
+    border: 2px solid var(--secondaryBg);
+    border-top: 2px solid var(--accent);
     display: flex;
 
     .content {

@@ -1,0 +1,57 @@
+body {
+  &.default-dark {
+    --primaryBg: #1f1f1f;
+    --secondaryBg: #222222;
+    --ternaryBg: #1c1c1c;
+
+    --primaryBgLight: #272727;
+    --secondaryBgLight: #2e2e2e;
+    --ternaryBgLight: #1c1c1c;
+    
+    --primaryBgDark: #1f1f1f;
+    --secondaryBgDark: #202020;
+    --ternaryBgDark: #1b1b1b;
+
+    --primaryBorder: #333333;
+    --secondaryBorder: #1b1b1b;
+    --accent: #e6bf3e;
+
+    --primaryText: #dddddd;
+
+    --inputBg: var(--secondaryBg);
+
+    --white: #ffffff;
+  }
+
+  &.twilight {
+    --primaryBg: #20212c;
+    --secondaryBg: #262a39;
+    --ternaryBg: #282939;
+
+    --primaryBorder: #282939;
+    --secondaryBorder: rgba(var(--ternaryBg), 3%);
+    --accent: #7b72c1;
+
+    --primaryText: #dddddd;
+
+    --inputBg: #282939;
+
+    --white: #ffffff;
+  }
+
+  &.dracula {
+    --primaryBg: #040404;
+    --secondaryBg: #0d0f11;
+    --ternaryBg: #181a1e;
+
+    --primaryBorder: #181a1e;
+    --secondaryBorder: rgba(var(--ternaryBg), 5%);
+    --accent: #be3333;
+
+    --primaryText: #dddddd;
+
+    --inputBg: #181a1e;
+
+    --white: #ffffff;
+  }
+}
