@@ -64,7 +64,7 @@ h2[id] {
         top: 50%;
         left: -28px;
         transform: translateY(-50%);
-        color: rgba(var(--primaryText), .2);
+        color: var(--secondaryText);
         font-size: 28px;
         animation: hash 1s ease-in-out;
     }
@@ -92,14 +92,13 @@ h2[id] {
 
 @keyframes hash {
     0% {
-        color: rgba(var(--primaryText), 0);
+        color: transparent;
     }
 
     60% {
-        color: rgba(var(--accent), 1);
+        color: var(--accent);
     }
 
     100% {
-        color: rgba(var(--primaryText), .2);
-    }
+        color: var(--secondaryText);    }
 }

@@ -21,14 +21,16 @@ export type TThemeContext = {
   setTheme: (theme: TTheme) => void,
 };
 
+const DEFAULT_THEME = "default-dark";
+
 const ThemeContext = createContext<TThemeContext>({
-  theme: "default-dark",
+  theme: DEFAULT_THEME,
   setTheme: () => {},
 });
 
 export const ThemeProvider:React.FC<Props> = ({ children }) => {
   const storageTheme = isMounted ? localStorage.getItem("theme") : null;
-  const [theme, setTheme] = useState<TTheme>(storageTheme as TTheme ?? "default-dark") ;
+  const [theme, setTheme] = useState<TTheme>(storageTheme as TTheme ?? DEFAULT_THEME);
   const prevTheme = usePrevious(theme);
 
   useEffect(() => {
@@ -40,13 +42,17 @@ export const ThemeProvider:React.FC<Props> = ({ children }) => {
     document.body.classList.add(theme);
   }, [theme])
 
-  return (
-    <ThemeContext.Provider value={{
-      theme, setTheme,
-    }}>
-      {children}
-    </ThemeContext.Provider>
-  )
+  if(isMounted) {
+    return (
+      <ThemeContext.Provider value={{
+        theme, setTheme,
+      }}>
+        {children}
+      </ThemeContext.Provider>
+    )
+  } else {
+    return <></>
+  }
 }
 
 export default ThemeContext;
