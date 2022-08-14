@@ -6,7 +6,7 @@
   }
 
   &.mobile {
-    background: $ternaryBg;
+    background: var(--ternaryBg);
     display: none;
     position: fixed;
     bottom: 0;
@@ -27,8 +27,16 @@
   }
 
   .nav-item {
-    margin-left: 20px;
+    margin-left: 10px;
     display: flex;
+    position: relative;
+
+    &.center {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -41,7 +49,7 @@
 
       .nav-link {
         padding: 20px 6px;
-        font-size: 10px;
+        font-size: 12px;
       }
     }
   }

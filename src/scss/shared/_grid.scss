@@ -6,7 +6,7 @@
     
     &:not(.neutral) {
         max-width: 1320px;
-        background: $secondaryBg;
+        background: var(--secondaryBg);
         border-radius: 16px;
         margin-bottom: 80px;
         padding: 30px 40px;

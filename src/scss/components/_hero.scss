@@ -12,9 +12,9 @@
             height: 200px;
             bottom: -40px;
             left: -40px;
-            background: $primaryBg;
+            background: var(--primaryBg);
             border-top-right-radius: 100%;
-            box-shadow: 4px -4px 1px 1px $accent, 20px -20px 1px 1px $primaryBg;
+            box-shadow: 4px -4px 1px 1px var(--accent), 20px -20px 1px 1px var(--primaryBg);
         }
     }
 

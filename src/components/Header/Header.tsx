@@ -7,7 +7,13 @@ import {
   faFileLines,
   faScrewdriverWrench,
   faUser,
-  faAt } from "@fortawesome/free-solid-svg-icons";
+  faAt, 
+  faSwatchbook,
+  faGear,
+  faDroplet,
+  faMoon,
+  faEraser} from "@fortawesome/free-solid-svg-icons";
+import Settings from "../Settings/Settings";
 
 export default function Header() {
   //const
@@ -136,6 +142,9 @@ export default function Header() {
                   </span>
                 </button>
               </li>
+              <li className="nav-item">
+                <Settings />
+              </li>
             </ul>
           </nav>
         </div>
@@ -192,6 +201,9 @@ export default function Header() {
               Contact
             </span>
           </ActiveLink>
+        </li>
+        <li className="nav-item center">
+          <Settings />
         </li>
       </ul>
     </div>
