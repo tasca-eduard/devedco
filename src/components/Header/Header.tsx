@@ -7,18 +7,10 @@ import {
   faFileLines,
   faScrewdriverWrench,
   faUser,
-  faAt, 
-  faSwatchbook,
-  faGear,
-  faDroplet,
-  faMoon,
-  faEraser} from "@fortawesome/free-solid-svg-icons";
+  faAt} from "@fortawesome/free-solid-svg-icons";
 import Settings from "../Settings/Settings";
 
 export default function Header() {
-  //const
-  const HIDE_SCROLL_BUFFER = 50;
-
   //state
   const [hash, setHash] = useState('');
   const [y, setY] = useState(0);
@@ -37,10 +29,16 @@ export default function Header() {
     if (y > window.scrollY) {
       //scrolling up
       uiRef.current?.classList.remove("hide-ui")
-    } else if (y < window.scrollY - HIDE_SCROLL_BUFFER) {
+    } else if (y < window.scrollY) {
       //scrolling down
       uiRef.current?.classList.add("hide-ui");
     }
+
+    // if(window.scrollY) {
+    //   uiRef.current?.classList.add("logo-slide");
+    // } else {
+    //   uiRef.current?.classList.remove("logo-slide");
+    // }
 
     setY(window.scrollY);
   }, [y, hash]);
