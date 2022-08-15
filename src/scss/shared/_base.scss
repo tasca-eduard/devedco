@@ -1,8 +1,39 @@
 .ui {
+    &.logo-slide {
+        .header-container {
+            padding-block: 6px;
+        }
+
+        .logo {
+            &:hover,
+            &:focus-visible {
+                &::after {
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    bottom: 12px;
+                }
+            }
+
+            &::after {
+              left: calc(50% + 5px);
+              bottom: 15px;
+            }
+        }
+
+        .immersed {
+            top: 13px;
+
+            & + span {
+                margin-left: 26px;
+            }
+        }
+    }
+
     @media screen and (max-width: 767px) {
         .header,
         .menu {
-            transition: .8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            transition: .4s ease-in-out;
         }
     
         &.hide-ui {
@@ -42,10 +73,15 @@ body {
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 1px;
+        transition: .4s ease-in-out;
 
         &::first-letter {
             color: var(--accent);
             font-weight: 700;
+        }
+
+        & + span {
+            transition: .3s ease-in-out;
         }
     }
 }
