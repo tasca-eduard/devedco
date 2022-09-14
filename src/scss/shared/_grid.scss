@@ -3,7 +3,15 @@
     width: 100%;
     margin: 0 auto;
     padding-inline: 40px;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     &:not(.neutral) {
         max-width: 1320px;
         background: var(--secondaryBg);
