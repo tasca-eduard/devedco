@@ -2,7 +2,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { NextPage } from 'next';
-import { ChangeEvent, FormEvent, useCallback, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import Logo from '../components/Logo/Logo';
@@ -31,6 +31,25 @@ const Home: NextPage = () => {
     setIsLoading(false);
     setMessage(resObj.message);
   }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      })
+    })
+
+    const cards = document.querySelectorAll(".card");
+    const containers = document.querySelectorAll(".container");
+    cards.forEach((el) => observer.observe(el));
+    containers.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <>
