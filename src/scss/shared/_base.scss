@@ -50,6 +50,25 @@
 
 body {
     background: var(--primaryBg);
+
+    &.translate {
+        overflow: hidden;
+
+        #page {
+            transform: translateX(-150px) translateY(-100px) scale(.9);
+            filter: blur(2px);
+        }
+
+        @media screen and (max-width: 767px) {
+            .menu {
+                transform: translateY(100%);
+            }
+        }
+    }
+}
+
+#page {
+    transition: .2s ease-in-out;
 }
 
 .main {
@@ -137,4 +156,12 @@ h2[id] {
 
     100% {
         color: var(--secondaryText);    }
+}
+
+.active {
+    color: var(--accent);
+
+    path {
+        fill: var(--accent);
+    }
 }
