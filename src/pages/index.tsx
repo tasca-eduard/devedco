@@ -43,7 +43,7 @@ const Home: NextPage = () => {
       })
     })
 
-    const cards = document.querySelectorAll(".card");
+    const cards = document.querySelectorAll(".card:not(.minimal)");
     const containers = document.querySelectorAll(".container");
     cards.forEach((el) => observer.observe(el));
     containers.forEach((el) => observer.observe(el));
