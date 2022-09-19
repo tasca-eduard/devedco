@@ -68,4 +68,28 @@ body {
 
     --white: #ffffff;
   }
+
+  &.default-light {
+    --primaryBg: #e0e0e0;
+    --secondaryBg: #d1d1d1;
+    --ternaryBg: #e3e3e3;
+
+    --primaryBgLight: #d8d8d8;
+
+    --secondaryBgLight: #d1d1d1;
+    --ternaryBgLight: #e3e3e3;
+    
+    --primaryBgDark: #e0e0e0;
+    --secondaryBgDark: #dfdfdf;
+    --ternaryBgDark: #e4e4e4;
+
+    --primaryBorder: #cccccc;
+    --accent: #3e87e6;
+
+    --primaryText: #222222;
+    --primaryTextDim: #424242;
+    --secondaryText: #c7c7c7;
+
+    --white: #ffffff;
+  }
 }
