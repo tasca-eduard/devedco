@@ -5,13 +5,15 @@ import { CSSTransition } from 'react-transition-group';
 interface Props {
   show: boolean,
   onHide: () => void,
-  children: JSX.Element
+  children: JSX.Element,
+  id: string
 }
 
 export default function Offcanvas({
   show,
   onHide,
-  children
+  children,
+  id
 }: Props) {
   const offCanvasRef = useRef<HTMLDivElement>(null);
   const root = document.querySelector("#portal-root") as HTMLDivElement;
@@ -35,7 +37,9 @@ export default function Offcanvas({
             ReactDOM.createPortal(
               <>
                 <div className="overlay-backdrop" onClick={onHide}></div>
-                <div className={[
+                <div
+                  id={id} 
+                  className={[
                   "offcanvas"
                 ].join(" ")}
                   ref={offCanvasRef}

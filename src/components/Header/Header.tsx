@@ -214,6 +214,7 @@ export default function Header() {
       <Offcanvas
         show={showOffcanvas}
         onHide={() => setShowOffcanvas(false)}
+        id="resume"
       >
         <Resume />
       </Offcanvas>
