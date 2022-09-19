@@ -1,0 +1,44 @@
+.offcanvas {
+  padding:  86px 44px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 50%;
+  background: var(--primaryBg);
+  animation: .24s forwards ease-in-out;
+  box-shadow: 0 0 40px 0 var(--primaryShadow);
+  overflow-y: auto;
+  z-index: 3;
+  
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn {
+    width: auto;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 90%;
+    padding-top: 76px;
+  }
+}
+
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: var(--primaryBackdrop);
+}

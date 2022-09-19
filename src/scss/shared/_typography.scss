@@ -1,7 +1,8 @@
 h1,
-h2 {
+h2,
+h3 {
     &::first-letter {
-        color: rgba(var(--primaryText), .8);
+        color: var(--primaryTextDim);
     }
 }
 
