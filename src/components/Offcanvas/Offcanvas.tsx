@@ -34,7 +34,7 @@ export default function Offcanvas({
           {
             ReactDOM.createPortal(
               <>
-                <div className="offcanvas-backdrop" onClick={onHide}></div>
+                <div className="overlay-backdrop" onClick={onHide}></div>
                 <div className={[
                   "offcanvas"
                 ].join(" ")}
