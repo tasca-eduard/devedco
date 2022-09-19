@@ -19,3 +19,27 @@
   transform: translateX(100%);
   opacity: .5;
 }
+
+@keyframes spinner {
+  from {
+      transform: translateY(-70%);
+  }
+
+  to {
+      transform: translateY(-140%);
+  }
+}
+
+
+@keyframes hash {
+  0% {
+      color: transparent;
+  }
+
+  60% {
+      color: var(--accent);
+  }
+
+  100% {
+      color: var(--secondaryText);    }
+}

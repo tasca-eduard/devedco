@@ -54,9 +54,13 @@ body {
     &.translate {
         overflow: hidden;
 
+        .overlay-backdrop {
+            background: var(--primaryBackdrop);
+            backdrop-filter: blur(2px);
+        }
+        
         #page {
             transform: translateX(-150px) translateY(-100px) scale(.9);
-            filter: blur(2px);
         }
 
         @media screen and (max-width: 767px) {
@@ -143,19 +147,6 @@ h2[id] {
             left: -16px;
         }
     }
-}
-
-@keyframes hash {
-    0% {
-        color: transparent;
-    }
-
-    60% {
-        color: var(--accent);
-    }
-
-    100% {
-        color: var(--secondaryText);    }
 }
 
 .active {
