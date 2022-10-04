@@ -48,4 +48,10 @@
     span {
         font-size: 14px;
     }
+
+    .input-error {
+        color: var(--error);
+        font-size: 12px;
+        padding-top: 8px;
+    }
 }

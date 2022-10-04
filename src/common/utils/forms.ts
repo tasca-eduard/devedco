@@ -1,7 +1,9 @@
+import Joi from "joi";
 import { ChangeEvent } from "react";
+import { upperFirst } from "../utils";
 
 export function computeFormErrors(
-  schema: any,
+  schema: Joi.Schema,
   formData: any,
   setFormErrors: any
 ) {
@@ -13,11 +15,11 @@ export function computeFormErrors(
     const errors = error.details;
     let tempErrors: any = {};
 
-    errors.forEach((error: any) => {
+    errors.forEach((error) => {
       const { path, message } = error;
       const key = path[0];
 
-      tempErrors[key as keyof any] = message;
+      tempErrors[key as keyof any] = upperFirst(message.replaceAll('"', ""));
     })
 
     setFormErrors(tempErrors)

@@ -48,7 +48,7 @@ export default function ContactForm() {
           id="name"
           placeholder="Enter your name or alias"
         />
-        <span>{formErrors?.name}</span>
+        <span className="input-error">{formErrors?.name}</span>
       </div>
       <div className="field">
         <label htmlFor="email" className="label">Email</label>
@@ -61,7 +61,7 @@ export default function ContactForm() {
           id="email"
           placeholder="Enter your email"
         />
-        <span>{formErrors?.email}</span>
+        <span className="input-error">{formErrors?.email}</span>
       </div>
       <div className="field">
         <label htmlFor="message" className="label">Message</label>
@@ -76,7 +76,7 @@ export default function ContactForm() {
           placeholder="Enter your message"
         >
         </textarea>
-        <span>{formErrors?.message}</span>
+        <span className="input-error">{formErrors?.message}</span>
       </div>
       <small>Data will be used only to communicate.</small>
       <br />
