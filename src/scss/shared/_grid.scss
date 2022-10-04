@@ -21,17 +21,17 @@
     }
 
     @media screen and (max-width: 767px) {
-        padding-inline: 20px;
+        padding-inline: 10px;
 
         &:not(.neutral) {
-            padding-inline: 20px;
+            padding-inline: 10px;
         }
     }
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 40px;
 
     &.medium {
