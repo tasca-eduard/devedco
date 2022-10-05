@@ -11,8 +11,7 @@
 
     &.focus {
       background: transparent;
-      transform: rotate(-45deg);
-      bottom: 2px;
+      transform: rotate(90deg);
 
       path {
         fill: var(--accent);
