@@ -1,4 +1,4 @@
-import { faDroplet, faEraser, faMask, faMoon, faPeace, faSun, faSwatchbook, faWater, faWind } from "@fortawesome/free-solid-svg-icons";
+import { faDroplet, faEraser, faGear, faMask, faMoon, faSun, faWater, faWind } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
@@ -14,7 +14,7 @@ export default function Settings() {
   }
 
   useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
+    function setClickOutside(e: MouseEvent) {
       if (
         optionsRef.current && 
         !optionsRef.current.contains(e.target as Node) &&
@@ -25,11 +25,28 @@ export default function Settings() {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", setClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", setClickOutside);
     };
   }, [optionsRef]);
+
+
+  useEffect(() => {
+    function setIconRotation() {
+      const ROTATE_FACTOR = 1 / 5;
+      const rotateDeg = `${window.scrollY * ROTATE_FACTOR}deg`
+
+      if (triggerRef.current) {
+        triggerRef.current.style.rotate = rotateDeg
+      }
+    }
+
+    document.addEventListener("scroll", setIconRotation);
+    return () => {
+      document.removeEventListener("scroll", setIconRotation);
+    };
+  })
 
   return (
     <div className="settings">
@@ -44,7 +61,7 @@ export default function Settings() {
         ref={triggerRef}
       >
         <span>
-          <FontAwesomeIcon icon={faSwatchbook} />
+          <FontAwesomeIcon icon={faGear} />
         </span>
       </button>
 
