@@ -78,9 +78,6 @@ export default function ContactForm() {
         </textarea>
         <span className="input-error">{formErrors?.message}</span>
       </div>
-      <small>Data will be used only to communicate.</small>
-      <br />
-      <br />
       {
         isLoading ? (
           <button className="btn submit loader" disabled>
@@ -95,7 +92,9 @@ export default function ContactForm() {
         )
       }
       <br />
-      <span>Use your prefered <a href="mailto:contact@devedco.com">email service</a>.</span>
+      <small>Information is stored only by the email provider.</small>
+      <br />
+      <small>Use your prefered <a href="mailto:contact@devedco.com">email service</a>.</small>
     </form>
   )
 }
