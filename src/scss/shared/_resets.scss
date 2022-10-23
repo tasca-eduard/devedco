@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     color: var(--primaryText);
+    cursor: none;
 }
 
 html {
@@ -30,7 +31,6 @@ ul {
 
 button {
     font-weight: 700;
-    cursor: pointer;
 
     &:focus {
         outline: none;
@@ -68,4 +68,9 @@ a {
             border-radius: 0;
         }
     }
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--primaryBg);
 }

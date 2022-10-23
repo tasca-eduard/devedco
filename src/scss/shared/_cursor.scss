@@ -1,0 +1,62 @@
+.cursor {
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9;
+  transition: 
+    .4s border,
+    .2s background;
+  opacity: 0;
+
+  svg {
+    opacity: 0;
+    transition: .2s;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    path {
+      fill: var(--accent);
+    }
+  }
+
+  &.cursor-extern-link,
+  &.cursor-intern-link,
+  &.cursor-button,
+  &.cursor-input {
+    background: var(--primaryBg);
+    border-color: var(--primaryBg);
+  }
+
+  &.cursor-extern-link {
+    .cursor-extern-icon {
+      opacity: 1;
+    }
+  }
+
+  &.cursor-intern-link {
+    .cursor-intern-icon {
+      opacity: 1;
+    }
+  }
+
+  &.cursor-button {
+    .cursor-button-icon {
+      opacity: 1;
+    }
+  }
+
+  &.cursor-input {
+    .cursor-input-icon {
+      opacity: 1;
+    }
+  }
+}
