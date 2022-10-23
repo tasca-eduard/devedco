@@ -5,6 +5,12 @@
     font-family: 'Montserrat', sans-serif;
     color: var(--primaryText);
     cursor: none;
+
+    @media screen and (max-width: 1024px) {
+        * {
+            cursor: auto;
+        }
+    }
 }
 
 html {

@@ -82,8 +82,10 @@ export default function Cursor() {
       });
     }
 
-    window.addEventListener("mousemove", handleCursorMove);
-    window.addEventListener("mouseout", handleCursorOutPage);
+    if (window.innerWidth > 1024) {
+      window.addEventListener("mousemove", handleCursorMove);
+      window.addEventListener("mouseout", handleCursorOutPage);
+    }
   }, [])
 
   return (
