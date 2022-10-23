@@ -53,14 +53,14 @@ body {
 
     &.translate {
         overflow: hidden;
+        padding-right: 8px;
+
+        .header {
+            padding-right: 8px;
+        }
 
         .overlay-backdrop {
             background: var(--primaryBackdrop);
-            backdrop-filter: blur(2px);
-        }
-        
-        #page {
-            transform: translateX(-150px) translateY(-100px) scale(.9);
         }
 
         @media screen and (max-width: 767px) {

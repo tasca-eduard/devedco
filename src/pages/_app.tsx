@@ -2,6 +2,7 @@ import '../scss/main.scss';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from '../context/ThemeContext';
 import { useEffect } from 'react';
+import Cursor from '../components/Cursor/Cursor';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider>
+      <Cursor />
       <Component {...pageProps} />
     </ThemeProvider>
   ) 
