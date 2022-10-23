@@ -16,8 +16,8 @@
             }
 
             &::after {
-              left: calc(50% + 5px);
-              bottom: 15px;
+                left: calc(50% + 5px);
+                bottom: 15px;
             }
         }
 
@@ -31,16 +31,17 @@
     }
 
     @media screen and (max-width: 767px) {
+
         .header,
         .menu {
             transition: .4s ease-in-out;
         }
-    
+
         &.hide-ui {
             .header {
                 transform: translateY(-100%);
             }
-    
+
             .menu {
                 transform: translateY(100%);
             }
@@ -53,11 +54,6 @@ body {
 
     &.translate {
         overflow: hidden;
-        padding-right: 8px;
-
-        .header {
-            padding-right: 8px;
-        }
 
         .overlay-backdrop {
             background: var(--primaryBackdrop);
@@ -111,10 +107,10 @@ body {
 
 h1[id],
 h2[id] {
-    scroll-margin-top: 140px; 
+    scroll-margin-top: 140px;
 }
 
-:target { 
+:target {
     position: relative;
 
     &::after {
