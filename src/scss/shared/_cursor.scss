@@ -1,7 +1,8 @@
 .cursor {
-  width: 25px;
-  height: 25px;
-  border: 2px solid var(--accent);
+  width: 30px;
+  height: 30px;
+  outline: 2px solid var(--accent);
+  outline-offset: -5px;
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -32,8 +33,8 @@
   &.cursor-intern-link,
   &.cursor-button,
   &.cursor-input {
+    outline-color: var(--primaryBg);
     background: var(--primaryBg);
-    border-color: var(--primaryBg);
   }
 
   &.cursor-extern-link {
