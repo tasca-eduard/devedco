@@ -21,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const mailOptions = {
     from: process.env.MAILER_USER,
-    to: process.env.MAILER_USER,
+    to: process.env.MY_MAIL,
     subject: senderOptions.name,
     html: `
       <span>${senderOptions.name} - ${senderOptions.email}</span>
