@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from '../context/ThemeContext';
 import { useEffect } from 'react';
 import Cursor from '../components/Cursor/Cursor';
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider>
       <Cursor />
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   ) 
 }
