@@ -6,7 +6,7 @@
     color: var(--primaryText);
     cursor: none;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: var(--max-tablet-width)) {
         * {
             cursor: auto;
         }
