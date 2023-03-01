@@ -20,9 +20,7 @@ export default function Resume() {
       <h3>Contact</h3>
       <div className="card secondary">  
         <span>
-          +40 735 097 089 |
-          eduardcristiantasca@gmail.com |
-          Cluj-Napoca, Romania
+          eduardcristiantasca@gmail.com
         </span>
         <br />
       </div>
