@@ -6,7 +6,10 @@ export default function Resume() {
   return (
     <div className="rich-text">
       <div className="head">
-        <h2>Eduard-Cristian Tașcă</h2>
+        <div>
+          <h2>Eduard-Cristian Tașcă</h2>
+          <h3>Frontend Developer</h3>
+        </div>
         <button
           className="btn"
           onClick={window.print}
@@ -17,51 +20,85 @@ export default function Resume() {
       </div>
       <br />
 
-      <h3>Contact</h3>
-      <div className="card secondary">  
-        <span>
+      <h3>Details</h3>
+      <div className="grid medium">
+        <div className="card secondary">
+          <strong>Email</strong>: 
           eduardcristiantasca@gmail.com
-        </span>
-        <br />
+        </div>
+        <div className="card secondary">
+          <strong>Phone</strong>: 
+          0735 097 089
+        </div>
+        <div className="card secondary">
+          <strong>LinkedIn</strong>: 
+          linkedin.com/in/eduard-cristian-tasca
+        </div>
       </div>
       <br />
 
       <h3>About</h3>
       <div className="card secondary">
         <p>
-          I'm a Frontend Developer and I create web pages and functionalities from scratch based on given designs (Figma, Zeplin, Photoshop, InVision) and business logic. Besides that, I maintain websites by fixing bugs, debugging, giving suggestions about better UX/UI (as well as receive).
-          <br />
-          <br />
-          I'm part of the AGILE and SCRUM meetings with devs from different parts of the world - so teamwork and comprehension are part of my core process of finalizing a task.
-          <br />
-          <br />
-          <small>For now, I'm mostly focused on Frontend Development, but in the future I'd like to leave traces on the Backend side too.</small>
+        I have been working as a frontend developer for 3 years now on different projects: some from scratch and others by maintaining and updating the current state of the websites. From portfolio, corporate or institution websites, to large big e-commerce websites with various partners, payment portals and app-like websites.
+        <br />
+        <br />
+        I have been part of small to large sized teams by attending online meetings with everyone involved, updating the status of the tickets on management platforms and having calls with developers so we coordinate in the best manner possible. So teamwork and comprehension are part of my core process of finalizing a task.
+        <br />
+        <br />
+        I have a good understanding of various coding standards and best practices. I try to be active and precise in the project as much as possible and give suggestions for a cleaner code, much easier to follow - as well as receive.
         </p>
       </div>
       <br />
       <div>
         <h3>Work Experience</h3>
         <div className="card secondary">
-          <span>Wavemyth - <strong>Frontend Developer</strong></span>
+          <span><strong>Wavemyth</strong> - Frontend Developer</span>
           <br />
           <small>2020 - Present | Cluj-Napoca, Romania</small>
           <br />
+          <br />
+          <p>My time here consists in outsourcing, but also on internal projects. Besides my work, I was able to mentor and help other colleagues.</p>
           <ul>
             <li>
-              Lots of frontend and modarate backend contribution for a US company, focusing on creating an NFT Isometric strategy game on the WAX blockchain.
+              Worked on a SAAS internal project soon to be in the MVP stage. The project consists in managing boards, tickets, members, preferences and board settings.
               <br />
               <ul>
                 <li>
-                  Created from scratch the codebase of a game UI in <strong>NextJS</strong> connected to the actual game developed using <strong>Phaser 3</strong>.
+                  I have used <strong>React and Typescript</strong> in order to preserve a clean and understandable code.
                 </li>
                 <li>
-                  Researched Phaser so I can implement an efficient isometric strategy browser game in a single canvas.
+                  Implemented the Drag and Drop functionality using the <strong>React Beautiful DND</strong> library since it has a lot of features out of the box.
+                </li>
+                <li>
+                  We've tried to make the UI more intuitive and easier to follow in order to have a better UX than the already available platforms.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Lots of contributions for a US company, focused on creating an NFT Isometric Strategy Game on the WAX blockchain.
+              <br />
+              <ul>
+                <li>
+                  Created from scratch the game UI in <strong>NextJS</strong> connected to the actual game developed using <strong>Phaser 3</strong>.
+                </li>
+                <li>
+                  Researched Phaser 3 so I can implement an efficient isometric strategy browser game.
                 </li>
                 <li>
                   Managed PSD and AI files in order to make them usable for the Phaser library.
                 </li>
                 <li>
-                  Used <strong>SWR</strong> to preserve and invalidate the cache after various transaction on the blockchain.
+                  Used <strong>SWR</strong> to preserve and invalidate the cache after various transactions on the blockchain.
+                </li>
+                <li>
+                  Also created the Hub platform where the user can burn the unused NFTS in order to redeem other cards to use in the actual game, like land, buildings, workers and passports to travel between realms.  
+                </li>
+                <li>
+                  Maintained the main marketing website in <strong>Wordpress</strong>. The purpose of this website was mostly presentational. Between presenting the story, gameplay and entities you could play with, the user could buy NFT packs.
+                </li>
+                <li>
+                  I have been actively checking the community in order to extract the best suggestions for a better UI and UX, but also possibly bugs.
                 </li>
               </ul>
             </li>
@@ -70,16 +107,41 @@ export default function Resume() {
               <br />
               <ul>
                 <li>
-                  Used relatively new tools like <strong>ReactJS and Typescript</strong> with a really good placed project structure / architecture.
+                  Used <strong>ReactJS and Typescript</strong> with a really good placed project structure / architecture.
+                </li>
+                <li>
+                  Came up with ways to combine different <strong>REST API</strong> responses in order to create our own data structure that can easily be used to render the needed information.
                 </li>
               </ul>
             </li>
             <li>
-              Outsourcing for a large company - A web design, development, and digital marketing agency.
+              Worked for a US Multinational Home Emergency Repairs and Improvements Business that had a vast project size.
               <br />
               <ul>
-                <li>Worked on medium and large size projects using <strong>jQuery, Javascript, Nunjucks, Handlebars</strong>.</li>
-                <li>Focused on legacy E-Comerce websites that had to be maintained, but also added new features, pages and portals with new and impoved functional and business logic.</li>
+                <li>
+                  I have been part of a large project based in US by being the only frontend developer besides the frontend lead that would mostly review my code and answer any eventual edge case issues. 
+                </li>
+                <li>
+                  This project implied creating new, refreshing pages with more organized and modern design, even new functionalities and updating the old one for a better UX and business flow. Giving the fact that it is a large multinational business with several partners and different country portals, it expanded in multiple versions or different instances of the same platform. This project was ambitious and rewarding since it implied creating robust and scalable code with reusable frontend components. 
+                </li>
+                <li>
+                  I worked with APIs that helped creating dynamic components and complex systems like a payment portal and other management pages for payment plans, documents and checkout journeys.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Redesign and reskin of an association that represend all U.S. investor-owned electric companies.
+              <br />
+              <ul>
+                <li>
+                  I was part of a relatively small team that recreated an old, non-responsive website by using the new designs and explored better ways of presenting the needed information to the user. 
+                </li>
+                <li>
+                  After finishing implementing the new given designs, there were several pages that needed only a reskin to make them responsive based on my professional knowledge or ideas. 
+                </li>
+                <li>
+                  The functionality parts, like the login systems basically remained the same backend wise, but I had to have multiple meetings with the backend developer to make them familiar with the new markup and I had some occasion when I needed to update the views and test them by myself.
+                </li>
               </ul>
             </li>
           </ul>
@@ -88,22 +150,16 @@ export default function Resume() {
       </div>
 
       <br />
-      <div>
+      <div id="education">
         <h3>Education</h3>
         <div className="grid medium">
           <div className="card secondary">
-            <span>Faculty of Mathematics and Informatics Babes-Bolyai University</span>
+            <span>Faculty of Mathematics and Informatics <br /> Babes-Bolyai University</span>
             <br />
             <small>2017 - 2020</small>
             <br />
-            <small>Mathematics and Informatics | <strong>Bachelor's Degree</strong></small>
-          </div>
-          <div className="card secondary">
-            <span>Titu Maiorescu National Collage Aiud</span>
-            <br />
-            <small>2013 - 2017</small>
-            <br />
-            <small>Mathematics and Informatics | <strong>High School Degree</strong></small>
+            <small>
+              <strong>Mathematics and Informatics</strong> | Bachelor's Degree</small>
           </div>
         </div>
       </div>
@@ -112,30 +168,28 @@ export default function Resume() {
       <h3>Skills</h3>
       <div className="grid medium">
         <div className="card secondary">
-          <small>Frameworks / Environments</small>
+          <small>Frameworks & Environments</small>
           <br />
-          <span>ReactJS, NextJS, NodeJS</span>
+          <span>ReactJS, NextJS, NodeJS, VueJS, Angular</span>
         </div>
 
         <div className="card secondary">
-          <small>Programming / Markup Languages</small>
+          <small>Programming & Markup Languages</small>
           <br />
-          <span> Javascript / Typescript, PHP, Java, C#, HTML, CSS, SASS / SCSS, LESS</span>
+          <span> Javascript / Typescript, PHP, Java, HTML, CSS, SASS / SCSS, LESS</span>
         </div>
 
         <div className="card secondary">
           <small>Libraries</small>
           <br />
-          <span>Phaser, React Leaflet / Leaflet, SWR, React CSSTransition, jQuery, React Bootstrap / Bootstrap, FontAwesome</span>
+          <span>React Beautiful DND, Phaser 3, React Leaflet / Leaflet, SWR, React CSSTransition, jQuery, React Bootstrap / Bootstrap, FontAwesome, MaterialUI</span>
         </div>
 
         <div className="card secondary">
           <small>Misc</small>
           <br />
-          <span>OOCSS, BEM, SMACCS, SVG, JSON, AJAX, Git, Github, Gitlab, Bitbucket, Jira, OOP, Responsive UI & UX</span>
+          <span>Wordpress, Sitecore, OOP, OOCSS, BEM, SMACCS, SVG, JSON, AJAX, Git, Github, Gitlab, Bitbucket, Jira, Responsive UI & UX, VS Code</span>
         </div>
-      </div>
-      <div className="grid medium">
         <div className="card secondary">
           <small>Soft Skills</small>
           <br />
@@ -147,9 +201,15 @@ export default function Resume() {
             Critical Thinking,
             Document Application Process,
             Troubleshooting,
-            Programming Experience,
             Mentoring and Helping Other Devs
           </span>
+        </div>
+        <div className="card secondary">
+          <small>Languages</small>
+          <br />
+          English - Fluent
+          <br />
+          Romanian - Native
         </div>
       </div>
     </div>
