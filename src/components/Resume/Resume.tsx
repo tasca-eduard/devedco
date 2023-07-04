@@ -24,17 +24,14 @@ export default function Resume() {
       <div className="grid medium">
         <div className="card secondary">
           <strong>Email</strong>: 
-          <br />
           eduardcristiantasca@gmail.com
         </div>
         <div className="card secondary">
           <strong>Phone</strong>: 
-          <br />
           0735 097 089
         </div>
         <div className="card secondary">
           <strong>LinkedIn</strong>: 
-          <br />
           linkedin.com/in/eduard-cristian-tasca
         </div>
       </div>
@@ -46,7 +43,7 @@ export default function Resume() {
         I have been working as a frontend developer for 3 years now on different projects: some from scratch and others by maintaining and updating the current state of the websites. From portfolio, corporate or institution websites, to large big e-commerce websites with various partners, payment portals and app-like websites.
         <br />
         <br />
-        I have worked from small to large sized teams by attending online meetings with everyone involved, updating the status of the tickets on management platforms and having calls with developers so we coordinate in the best manner possible. So teamwork and comprehension are part of my core process of finalizing a task.
+        I have been part of small to large sized teams by attending online meetings with everyone involved, updating the status of the tickets on management platforms and having calls with developers so we coordinate in the best manner possible. So teamwork and comprehension are part of my core process of finalizing a task.
         <br />
         <br />
         I have a good understanding of various coding standards and best practices. I try to be active and precise in the project as much as possible and give suggestions for a cleaner code, much easier to follow - as well as receive.
@@ -157,20 +154,12 @@ export default function Resume() {
         <h3>Education</h3>
         <div className="grid medium">
           <div className="card secondary">
-            <span>Faculty of Mathematics and Informatics Babes-Bolyai University</span>
+            <span>Faculty of Mathematics and Informatics <br /> Babes-Bolyai University</span>
             <br />
             <small>2017 - 2020</small>
             <br />
             <small>
               <strong>Mathematics and Informatics</strong> | Bachelor's Degree</small>
-          </div>
-          <div className="card secondary">
-            <span>Titu Maiorescu National Collage Aiud</span>
-            <br />
-            <small>2013 - 2017</small>
-            <br />
-            <small>
-              <strong>Mathematics and Informatics</strong> | High School Degree</small>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <div id="page">
         <main className="main">
           <Hero />
-          <Portofolio />
+          {/* <Portofolio /> */}
           <Techs />
           <About />
         </main>
