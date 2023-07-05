@@ -84,7 +84,7 @@ export default function Header() {
               </button>
             </div>
             <ul className="menu desktop">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <ActiveLink
                   href="#portofolio"
                   hash={hash}
@@ -96,7 +96,7 @@ export default function Header() {
                     Projects
                   </span>
                 </ActiveLink>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <ActiveLink
                   href="#techs"
@@ -155,7 +155,7 @@ export default function Header() {
         </div>
       </header>
       <ul className="menu mobile">
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <ActiveLink
             href="#portofolio"
             hash={hash}
@@ -167,7 +167,7 @@ export default function Header() {
               Projects
             </span>
           </ActiveLink>
-        </li>
+        </li> */}
         <li className="nav-item">
           <ActiveLink
             href="#techs"
